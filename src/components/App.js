@@ -66,7 +66,7 @@ function App() {
     }
     let bundle = await signMessage(signer);
     try {
-      await axios.post("http://localhost:5050/verificationBot/verifyAddress", {
+      await axios.post("http://147.182.182.39/verificationBot/verifyAddress", {
         payload: bundle,
       });
 
