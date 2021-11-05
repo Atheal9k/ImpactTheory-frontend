@@ -66,9 +66,12 @@ function App() {
     }
     let bundle = await signMessage(signer);
     try {
-      await axios.post("http://147.182.182.39/verificationBot/verifyAddress", {
-        payload: bundle,
-      });
+      await axios.post(
+        "https://backend.founderskey.io/verificationBot/verifyAddress",
+        {
+          payload: bundle,
+        }
+      );
 
       setCardText("Success! Check Discord to see if you got your role.");
       alert("Success! Check Discord to see if you got your role.");
